@@ -13,4 +13,7 @@ For this week's homework, your application needs to fullfill the following speci
 - Add a "New tweet" button in the action bar.
 - Add a detail view for tweets.
 
-We will add more on Monday. :)
+And Monday's addition...
+
+- Add an option to the settings menu to change the username
+- Add a notification in the phone's notification bar when they get a new follower or mention
