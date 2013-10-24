@@ -34,14 +34,16 @@ public class ConnectionFragment extends Fragment {
 
         // Create dummy data for demo
         List<FeedNotification> notifications = new ArrayList<FeedNotification>();
-        MentionNotification mention = new MentionNotification("@EvanSimpson", "@TimRyan", "Hey @TimRyan");
+/*        MentionNotification mention = new MentionNotification("@EvanSimpson", "@TimRyan", "Hey @TimRyan");
         FollowNotification follow = new FollowNotification("@reyner", "@TimRyan");
 
         notifications.add(mention);
-        notifications.add(follow);
+        notifications.add(follow);*/
 
         ConnectionListAdapter connectionListAdapter = new ConnectionListAdapter(this.getActivity(), notifications);
         ListView connectionList = (ListView) v.findViewById(R.id.connectionListView);
+
+        new ConnectionRequest(connectionListAdapter, notifications).execute("http://twitterproto.herokuapp.com/tweets?q=@mmay");
 
         connectionList.setAdapter(connectionListAdapter);
 
